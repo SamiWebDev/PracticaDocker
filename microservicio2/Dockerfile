@@ -1,17 +1,15 @@
-# 1. Especificar la imagen base
-FROM node:22.9.0-alpine
+FROM node:22.11.0-alpine
 
 WORKDIR /opt
 
-
-COPY package*.json ./
+COPY microservicio2/package*.json ./
 
 RUN npm install
 
 RUN npm run test
 
-COPY . .
+COPY microservicio2/ .
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]

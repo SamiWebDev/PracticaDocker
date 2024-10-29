@@ -6,9 +6,10 @@ COPY microservicio2/package*.json ./
 
 RUN npm install
 
+COPY microservicio2/ .
+
 RUN npm run test
 
-COPY microservicio2/ .
 
 EXPOSE 3000
 

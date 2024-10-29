@@ -21,10 +21,10 @@ jobs:
 
       - name: Subir microservicio 1
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/microservicio1:latest -f microservicio1/Dockerfile .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/microservicio1:latest
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/microservicio1:1.0 -f microservicio1/Dockerfile .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/microservicio1:1.0
 
       - name: Subir microservicio 2
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/microservicio2:latest -f microservicio2/Dockerfile .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/microservicio2:latest
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/microservicio2:1.0 -f microservicio2/Dockerfile .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/microservicio2:1.0
